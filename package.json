@@ -1,11 +1,11 @@
 {
   "name": "subscription-platform",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
     "start": "node dist/app.js",
     "dev": "nodemon --watch src --exec ts-node src/app.ts",
-    "build": "tsc"
+    "build": "tsc --build"
   },
   "keywords": [],
   "author": "",
