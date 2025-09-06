@@ -7,7 +7,7 @@ const dpoApi = new DPOApi();
 export const initiatePayment = async (req: Request, res: Response) => {
   try {
     const { amount, plan } = req.body;
-    const userId = (req as any).user.id; // Assuming authentication middleware sets req.user
+    const userId = (req as any).userId; // Assuming authentication middleware sets req.user
 
     // Create payment token with DPO
     const result = await dpoApi.createToken(
