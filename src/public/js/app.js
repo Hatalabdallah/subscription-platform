@@ -5,7 +5,10 @@ let selectedPayment = 'mtn';
 let token = localStorage.getItem('token');
 
 // API base URL
-const API_BASE_URL = 'http://localhost:3000/api';
+const isProduction = window.location.hostname !== 'localhost';
+const API_BASE_URL = isProduction 
+  ? 'https://subscription-platform4.onrender.com/api' 
+  : 'http://localhost:3000/api';
 
 // Show a specific section and hide others
 function showSection(sectionId) {
